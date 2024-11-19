@@ -1,0 +1,337 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  section {
+    padding: 50px;
+    text-align: center;
+  }
+  
+  h1, h2 {
+    margin-bottom: 30px;
+  }
+
+
+ /* Navbar Styles */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  #navbar .logo img {
+    height: 50px;
+  }
+  
+  /* Menu Button */
+  #menu-btn {
+    background-color: #ff5e5e;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #menu-btn:hover {
+    background-color: #ff1e1e;
+  }
+  
+  /* Social Profiles Dropdown */
+  #social-profiles {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    background-color: #444;
+    border-radius: 0 0 100% 100%; /* Makes the dropdown semicircular */
+    overflow: hidden;
+    clip-path: circle(0% at 50% 0%);
+    transition: clip-path 0.4s ease-in-out;
+  }
+  
+  #social-profiles a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  #social-profiles a:hover {
+    color: #ff5e5e;
+  }
+  
+  /* Show Social Profiles */
+  #social-profiles.show {
+    display: block;
+    clip-path: circle(100% at 50% 0%);
+  }
+  
+  /* Navbar Buttons */
+  .nav-buttons button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .nav-buttons button:hover {
+    background-color: #ff5e5e;
+  }
+  
+  
+  
+  /* Hero Section */
+#home {
+    background: url('images/hero1.jpeg') no-repeat center center/cover; /* Ensures the image covers the full section */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative; /* For overlay */
+    text-align: center;
+  }
+  
+  #home::before {
+    content: ""; /* Overlay effect */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for better text visibility */
+    z-index: 1;
+  }
+  
+  #home .hero {
+    z-index: 2; /* Place content above the overlay */
+  }
+  
+  #home h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  #home p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  #home .btn {
+    padding: 10px 20px;
+    background-color: #ff5e5e;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  #home .btn:hover {
+    background-color: #ff1e1e;
+  }
+  
+  
+  /* Gallery Section */
+  #gallery {
+    background-color: #f4f4f4;
+  }
+  
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  
+  .gallery-container img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-container img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Events Section */
+  .events-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .event-card {
+    background: #ff5e5e;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Enquiry Form Section */
+  #enquiry form {
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  #enquiry input, #enquiry textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #enquiry .btn {
+    background-color: #ff5e5e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+  }
+  
+  #enquiry .btn:hover {
+    background-color: #ff1e1e;
+  }
+  
+  @media (max-width: 768px) {
+    #home h1 {
+      font-size: 2.5rem;
+    }
+    #home p {
+      font-size: 1.2rem;
+    }
+  }
+  
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 768px) {
+    #navbar {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    #navbar .logo img {
+      height: 40px; /* Adjust logo size */
+    }
+  
+    #menu-btn {
+      margin-top: 10px;
+    }
+  
+    #social-profiles {
+      width: 150px; /* Reduce size for small screens */
+      height: 150px;
+    }
+  
+    #social-profiles a {
+      font-size: 0.9rem;
+    }
+  
+    .nav-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  
+    .nav-buttons button {
+      width: 100%;
+      padding: 8px 10px;
+    }
+  }
+  
+  /* Extra Small Devices */
+  @media (max-width: 480px) {
+    #navbar .logo img {
+      height: 35px;
+    }
+  
+    #menu-btn {
+      font-size: 0.9rem;
+      padding: 8px 12px;
+    }
+  
+    #social-profiles {
+      width: 120px;
+      height: 120px;
+    }
+  
+    #social-profiles a {
+      font-size: 0.8rem;
+    }
+  
+    .nav-buttons button {
+      font-size: 0.9rem;
+      padding: 6px 8px;
+    }
+  }
+  
+  /* Adjust Hero Section for Responsiveness */
+  @media (max-width: 768px) {
+    #home {
+      text-align: center;
+      padding: 20px;
+    }
+  
+    #home h1 {
+      font-size: 2rem;
+    }
+  
+    #home p {
+      font-size: 1rem;
+    }
+  
+    #home .btn {
+      padding: 8px 12px;
+    }
+  }
+  
+  /* Adjust Gallery Layout */
+  @media (max-width: 768px) {
+    .gallery-container {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .gallery-container {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+  }
+  

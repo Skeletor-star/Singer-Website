@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Singer's Personal Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="logo">
+          <img src="images/logo.png" alt="Singer Logo">
+        </div>
+        <div class="menu">
+          <button id="menu-btn">Menu</button>
+          <div id="social-profiles">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://youtube.com" target="_blank">YouTube</a>
+          </div>
+        </div>
+        <div class="nav-buttons">
+          <button onclick="location.href='#gallery'">Gallery</button>
+          <button onclick="location.href='#events'">Events</button>
+          <button onclick="location.href='#enquiry'">Contact</button>
+        </div>
+      </nav>
+      
+  
+  <!-- Home Section -->
+  <section id="home">
+    <div class="hero">
+      <h1> Nisha Upadhya</h1>
+      <p>Your favorite bhojpuri singer</p>
+      <a href="#gallery" class="btn">Explore Gallery</a>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-container">
+      <img src="images/images1.jpeg" alt="Performance 1">
+      <img src="images/images2.jpeg" alt="Performance 2">
+      <img src="images/images3.jpeg" alt="Performance 3">
+      <img src="images/images4.jpeg" alt="Performance 4">
+      <img src="images/images5.jpeg" alt="Performance 5">
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section id="events">
+    <h2>Upcoming Events</h2>
+    <div class="events-container">
+      <div class="event-card">
+        <h3>Live Concert</h3>
+        <p>Date: 25th Dec</p>
+        <p>Venue: Dwarka, Delhi</p>
+      </div>
+      <div class="event-card">
+        <h3>Charity Show</h3>
+        <p>Date: 5th Jan</p>
+        <p>Venue: xyz, Delhi</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enquiry Form Section -->
+  <section id="enquiry">
+    <h2>Contact Me</h2>
+    <form id="enquiry-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
